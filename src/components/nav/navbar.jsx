@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Box from "@material-ui/core/Box";
 import { Link, useLocation } from "react-router-dom";
 import Sign from "./modal";
-import {  makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Flag from "./flaqs";
 import { Typography } from "@material-ui/core";
@@ -11,7 +11,7 @@ import { logout } from "../../actions/actions";
 import MenuOpenRoundedIcon from "@material-ui/icons/MenuOpenRounded";
 
 const yasil = "rgb(0, 158, 127)";
- const aciqYasil = "rgb(0, 197, 141)";
+const aciqYasil = "rgb(0, 197, 141)";
 
 const useStyles = makeStyles({
   navCont: {

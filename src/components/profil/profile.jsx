@@ -35,9 +35,7 @@ const useStyles = makeStyles({
     zIndex: "5",
 
     ["@media (max-width:1000px)"]: {
-     
-      left: '-345px',
-
+      left: "-345px",
     },
   },
 
@@ -46,14 +44,13 @@ const useStyles = makeStyles({
   },
   "@keyframes sideba": {
     "0%": {
-      left:'-345px'
+      left: "-345px",
     },
 
     "100%": {
-      left:'0px'
+      left: "0px",
     },
   },
-
 
   prTable: {
     zIndex: "3",
@@ -66,8 +63,6 @@ const useStyles = makeStyles({
     right: "0",
     animation: `$fadee 500ms`,
   },
-
-
 
   "@keyframes fadee": {
     "0%": {
@@ -89,12 +84,9 @@ const useStyles = makeStyles({
     flexDirection: "column",
     justifyContent: "space-between",
     ["@media (max-width:1000px)"]: {
-     width:"100%"
+      width: "100%",
       // left: '-345px',
-
     },
-
-
   },
   proFooter: {
     height: "120px",
@@ -146,8 +138,7 @@ const useStyles = makeStyles({
     width: "60%",
     // marginBottom: "120px",
     ["@media (max-width:1000px)"]: {
-     
-     width:"100%"
+      width: "100%",
     },
   },
   proUpDashed: {
@@ -292,10 +283,8 @@ const useStyles = makeStyles({
     },
 
     ["@media (max-width:1000px)"]: {
-     
-      right: '20px !important',
-      left:'auto',
-
+      right: "20px !important",
+      left: "auto",
     },
   },
   categoriesss: {
@@ -330,11 +319,9 @@ const useStyles = makeStyles({
   },
   column760: {
     ["@media (max-width:1000px)"]: {
-     
-     flexDirection:"column"
-
+      flexDirection: "column",
     },
-  }
+  },
 });
 
 function Profile({
@@ -359,7 +346,7 @@ function Profile({
   setAmL,
   unit,
   setUnit,
-  prSideRef
+  prSideRef,
 }) {
   console.log(proAdd, "proadd");
   const logged = useSelector((state) => state.login.authen);
@@ -414,7 +401,6 @@ function Profile({
       pl={2}
       component="section"
       ref={prSideRef}
-   
     >
       <NavLink
         activeClassName={classes.activeLink}
@@ -660,7 +646,11 @@ function Profile({
             </h2>
 
             <Box component="main" className={classes.proMain}>
-              <Box className={classes.column760} display="flex" justifyContent="space-between">
+              <Box
+                className={classes.column760}
+                display="flex"
+                justifyContent="space-between"
+              >
                 <p className={classes.proYazi}>
                   Upload your Product image here
                 </p>
@@ -700,7 +690,7 @@ function Profile({
                       </p>
                     </Box>
                     <input
-                      accept="image/png, image/gif, image/jpeg" 
+                      accept="image/png, image/gif, image/jpeg"
                       onChange={(event) => {
                         setImg(event.currentTarget.files[0]);
                         const va2 = event.target;
@@ -711,8 +701,9 @@ function Profile({
                           pSekill.current.src = e.target.result;
                           // setImg()
                         };
-                        if(typeof event.currentTarget.files[0]=="object"){
-                        reader.readAsDataURL(event.currentTarget.files[0]);}
+                        if (typeof event.currentTarget.files[0] == "object") {
+                          reader.readAsDataURL(event.currentTarget.files[0]);
+                        }
 
                         // console.log(img, 'img');
                       }}
@@ -742,7 +733,12 @@ function Profile({
                 </Box>
               </Box>
 
-              <Box className={classes.column760} mt={4} display="flex" justifyContent="space-between">
+              <Box
+                className={classes.column760}
+                mt={4}
+                display="flex"
+                justifyContent="space-between"
+              >
                 <p className={classes.proYazi + " " + classes.animatedItem}>
                   Add your Product description and necessary information from
                   here
@@ -1019,7 +1015,7 @@ function Profile({
                         return { ...prevErrors, priceI: false };
                       });
                     }
-                    if (categoryI.length < 1) {
+                    if (categoryI?.length < 1) {
                       setErrors((prevErrors) => {
                         return {
                           ...prevErrors,
@@ -1079,8 +1075,8 @@ function Profile({
                   }
                 }}
               >
-                {!updatePr&&'Create Product'}
-                {updatePr&&'Update Product'}
+                {!updatePr && "Create Product"}
+                {updatePr && "Update Product"}
               </Button>
             </Box>
           </Box>

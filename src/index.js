@@ -14,12 +14,23 @@ const store = createStore(reducer, /* preloadedState, */ composeEnhancers(
  ));
 
 
-
-
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')
+
 );
+
+
+
+
+
+
+
+
+
+
+
+
 
